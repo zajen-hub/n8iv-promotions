@@ -1,0 +1,309 @@
+/*
+  N8iV Promotions Website Styles
+
+  This stylesheet defines a modern, premium look and feel for the N8iV
+  Promotions website. The design leans on a restrained colour palette and
+  generous whitespace to convey professionalism and trust. Sections are
+  clearly separated, typography is legible on all screen sizes and
+  call‑to‑action buttons stand out without overwhelming the reader. Images
+  generated for this site live in the `images` directory.
+*/
+
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f1f1f;
+  background-color: #ffffff;
+}
+
+/* Navigation */
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ffa94d;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  min-height: 500px;
+  width: 100%;
+  background-image: url("images/hero.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* dark overlay to increase contrast for text */
+  background: rgba(15, 15, 30, 0.65);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #d0d0d0;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #ffa94d; /* warm accent colour */
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #ff922b;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffa94d;
+  border: 2px solid #ffa94d;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #ffa94d;
+  color: #ffffff;
+}
+
+/* Section base styling */
+section {
+  padding: 4rem 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+section p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  color: #444444;
+}
+
+/* About Section */
+.about {
+  background-color: #f9f9f9;
+}
+
+/* Services Section */
+.services {
+  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-cards .card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-cards .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.service-cards h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1f1f1f;
+}
+
+.service-cards p {
+  font-size: 0.95rem;
+  color: #555555;
+  text-align: left;
+}
+
+/* Process Section */
+.process {
+  background-color: #f9f9f9;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.process-steps .step {
+  text-align: center;
+}
+
+.process-steps h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffa94d;
+}
+
+.process-steps p {
+  color: #444444;
+  font-size: 0.95rem;
+}
+
+/* Local Impact Section */
+.local {
+  background-image: url("images/desert.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.local::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 30, 0.7);
+  z-index: 1;
+}
+
+.local h2,
+.local p {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+/* Case Study Section */
+.case-study {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.case-study em {
+  font-style: italic;
+  color: #888888;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+footer {
+  background-color: #111111;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer p {
+  font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+}
